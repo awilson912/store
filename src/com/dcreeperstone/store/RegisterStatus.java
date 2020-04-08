@@ -14,19 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package restaurantlines;
+package com.dcreeperstone.store;
 
 /**
  *
  * @author Dr. Creeperstone
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public enum RegisterStatus {
+    OPEN, CLOSED, BUSY
 }

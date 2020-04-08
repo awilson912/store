@@ -14,43 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package restaurantlines;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package com.dcreeperstone.store;
 
 /**
- *
+ * 
  * @author Dr. Creeperstone
  */
-public class CashRegister {
-    
-    private RegisterStatus status;
-    private final Queue<Customer> line;
-    
-    public CashRegister() {
-        status = RegisterStatus.CLOSED;
-        line = new LinkedList<>();
-    }
-    
-    public RegisterStatus getStatus() {
-        return status;
-    }
-    
-    public void open() {
-        status = RegisterStatus.OPEN;
-    }
-    
-    public void close() {
-        status = RegisterStatus.CLOSED;
-    }
-    
-    public void addCustomer(Customer customer) {
-        line.add(customer);
-    }
-    
-    public void startService(Customer customer) {
-        status = RegisterStatus.BUSY;
-    }
-    
+public enum StoreStatus {
+    /**
+     * Indicates the store is open
+     */
+    OPEN, 
+    CLOSED
 }

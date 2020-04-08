@@ -14,12 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package restaurantlines;
+package com.dcreeperstone.store;
 
 /**
  *
  * @author Dr. Creeperstone
  */
-public enum RegisterStatus {
-    OPEN, CLOSED, BUSY
+public class Customer {
+    
+    private String name;
+    
+    public Customer() {
+        
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
 }
