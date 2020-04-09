@@ -27,14 +27,24 @@ public class CashRegister {
     
     private RegisterStatus status;
     private final Queue<Customer> line;
+    private int customersServed;
     
     public CashRegister() {
         status = RegisterStatus.CLOSED;
         line = new LinkedList<>();
+        customersServed = 0;
     }
     
     public RegisterStatus getStatus() {
         return status;
+    }
+    
+    public int getLineCount() {
+        return line.size();
+    }
+    
+    public int getCustomersServed() {
+        return customersServed;
     }
     
     public void open() {
@@ -51,6 +61,7 @@ public class CashRegister {
     
     public void startService(Customer customer) {
         status = RegisterStatus.BUSY;
+        customersServed++;
     }
     
 }

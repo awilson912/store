@@ -20,22 +20,13 @@ package com.dcreeperstone.store;
  *
  * @author Dr. Creeperstone
  */
-public class Customer {
+public class Item {
     
-    private final String name;
-    private final Cart cart;
-    
-    public Customer(String customerName) {
-        name = customerName;
-        cart = new Cart();
-    }
-    
-    public String getName() {
-        return name;
-    }
-    
-    public void pickUpItem(Item item) {
-        cart.addItem(item);
+    /**
+     *
+     */
+    public Item() {
+        
     }
     
 }

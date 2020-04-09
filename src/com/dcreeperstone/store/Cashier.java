@@ -20,22 +20,16 @@ package com.dcreeperstone.store;
  *
  * @author Dr. Creeperstone
  */
-public class Customer {
+public class Cashier extends CashRegister {
     
     private final String name;
-    private final Cart cart;
     
-    public Customer(String customerName) {
-        name = customerName;
-        cart = new Cart();
+    public Cashier(String cashierName) {
+        super();
+        name = cashierName;
     }
     
     public String getName() {
         return name;
     }
-    
-    public void pickUpItem(Item item) {
-        cart.addItem(item);
-    }
-    
 }

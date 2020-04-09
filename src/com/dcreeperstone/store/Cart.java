@@ -16,26 +16,32 @@
  */
 package com.dcreeperstone.store;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Dr. Creeperstone
  */
-public class Customer {
+public class Cart {
     
-    private final String name;
-    private final Cart cart;
+    public static final int MAX_ITEMS = 50;
     
-    public Customer(String customerName) {
-        name = customerName;
-        cart = new Cart();
+    private final List<Item> items;
+    
+    /**
+     *
+     */
+    public Cart() {
+        items = new ArrayList<>(MAX_ITEMS);
     }
     
-    public String getName() {
-        return name;
-    }
-    
-    public void pickUpItem(Item item) {
-        cart.addItem(item);
+    /**
+     *
+     * @param item
+     */
+    public void addItem(Item item) {
+        items.add(item);
     }
     
 }
